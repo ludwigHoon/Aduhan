@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from os import curdir, sep
+import parser
 
 PORT_NUMBER = 8080
 
@@ -13,7 +14,16 @@ class myHandler(BaseHTTPRequestHandler):
         if self.path=="/":
             self.path="/index.html"
         try:
-            mimetype='text/html'
+            if self.path.endswith(".html"):
+                mimetype='text/html'
+            if self.path.endswith(".jpg"):
+                mimetype='image/jpg'
+            if self.path.endswith(".gif"):
+                mimetype='image/gif'
+            if self.path.endswith(".js"):
+                mimetype='application/javascript'
+            if self.path.endswith(".css"):
+                mimetype='text/css'
             #Open the static file requested and send it
             f = open(curdir + sep + self.path, 'rb') 
             self.send_response(200)

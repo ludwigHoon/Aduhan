@@ -30,5 +30,10 @@ We use a simple rule-based system:
 
 *For all other problems posted, we let volunteers mark them and have another volunteer to verify it, feeding the data to model for better prediction next time*
 
+# Running prototype
+- python serve.py
+- Others are still under development - check Jupyter notebook
+- Currently visualisation is done in Tableau (remove dependency later)
+
 # More information
 For more information, please check our slides at: <Insert later(**Change permision to view only)>
