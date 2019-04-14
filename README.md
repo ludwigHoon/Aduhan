@@ -36,5 +36,8 @@ We use a simple rule-based system:
 - Others are still under development - check Jupyter notebook --> Data wrangling --> Possibly training model with WEKA (depends on time)
 - Currently visualisation is done in Tableau (remove dependency later)
 
+# Data used
+Our test cases is in Malaysia and we made use of open data provided by Malaysian government. The data is stored in *data* (creative common - open data licence). There may be other useful data that we have missed, visit http://www.data.gov.my to see a full list of data available.  
+
 # More information
 For more information, please check our slides at: <Insert later(**Change permision to view only)>
