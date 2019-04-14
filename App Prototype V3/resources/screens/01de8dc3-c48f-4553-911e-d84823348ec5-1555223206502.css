@@ -1,0 +1,32 @@
+#s-01de8dc3-c48f-4553-911e-d84823348ec5 > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-01de8dc3-c48f-4553-911e-d84823348ec5 > #alignmentBox {
+  position: relative;
+  max-width: 1366px;
+  max-height: 768px;
+}
+#s-01de8dc3-c48f-4553-911e-d84823348ec5 #s-Browser_1 {
+  position: absolute;
+  width: 1365px;
+  height: 702px;
+  box-shadow: none;
+}
+#s-01de8dc3-c48f-4553-911e-d84823348ec5 #s-Master_item_1 div.offset {
+  position: absolute;
+  top: 12px;
+  left: 7px;
+}
+#s-01de8dc3-c48f-4553-911e-d84823348ec5 #s-Master_item_1 {
+  position: absolute;
+  width: 1375px;
+  height: 66px;
+  overflow: visible;
+}
+#s-01de8dc3-c48f-4553-911e-d84823348ec5 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

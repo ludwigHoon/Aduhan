@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Display a map</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWllcmllIiwiYSI6ImNqdTZkeDFoaTEyY3g0ZXM3ZGVoYzBoNmgifQ.vGQqo0P_r3GMsH_1ZI18lw';
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/aierie/cjufjpltd13e71fmuo6063u8q',
+  center: [101.688326, 3.115447],
+  zoom: 12.4
+});
+
+map.on('click', function(e) {
+  var pointSearchFeatures = map.queryRenderedFeatures(e.point, {
+    layers: ['Complaints'] // replace this with the name of the layer
+  });
+
+  if (!pointSearchFeatures.length) {
+    return;
+  }
+
+  var pointFeature = pointSearchFeatures[0];
+
+  var councilStatement;
+
+  if (pointFeature.properties["Council Response"] == "Y") { 
+    councilStatement = "The government has issued a response! See our advocacy page for more details"
+    } else { 
+    councilStatement = "We are still waiting on a government response";
+    }
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(pointFeature.geometry.coordinates)
+    .setHTML('<div class="boxwrapper" id="limit">' + 
+    '<div>' + 
+    '<div class="content">' + 
+    '<figure class="myimg">' + 
+    '<img src=' + pointFeature.properties.Image + ' width="150" length="150"/>'+
+    '</figure>' + 
+    '<div class="actions"><img class="actions" src="https://i.imgur.com/TKoiYMk.png" width="20" length="20"/><img class="actions" src="https://i.imgur.com/Q3tVXms.png" width="20" length="20"/><img class="actions" src="https://i.imgur.com/QQmmoNY.png" width="20" length="20"/><div align="center">' + pointFeature.properties.Upvotes + '</div></div><h4 >' +  pointFeature.properties.Problem_description +'</h4>' + pointFeature.properties.Detailed_description + '</div><div><em class="gov">' +  councilStatement +  '</em></div></div></div>' +
+    //style
+    '<style>#limit {width: 400px;height: 230px;}.myimg {float: left;margin: 2px 2px 0 0;}.actions {float:right;}.boxwrapper {border: 5px solid black;}.content {margin: 10px;}.gov {float: left;margin: 10px;}</style>')
+    .setLngLat(pointFeature.geometry.coordinates)
+    .addTo(map);
+});
+
+</script>
+
+</body>
+</html>
+
+
