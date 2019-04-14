@@ -1,2 +1,5 @@
 Date,Longitude,Latitude,Problem_description,Category,Undeserved,Criticality
-"13/04/2019","101.7239218","3.2250236","bla bla","Road","Y","3"
+4/13/2022,101.7539218,3.2240236,Bad road condition,Road,N,1
+4/13/2019,101.7239218,3.2250236,Bad road condition,Road,Y,3
+4/13/2021,101.6239218,3.3250236,Broken facility,Park,N,1
+4/13/2020,101.7439218,3.2350236,No street lights,Lights,Y,2
