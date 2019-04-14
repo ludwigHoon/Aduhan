@@ -3,7 +3,7 @@ CodeathonX Kuala Lumpuer - Team Aduhan
 
 This was made during CodeathonX KL on 13-14 April 2019. 
 
-Aduhan was created by 4 passionate youths from different background interested in using tech to make this a better world. Aduhan wants to provide everyone better access to public facilities.   
+Aduhan was created by 4 passionate youths from different background interested in using tech to make this a better world. Aduhan wants to provide everyone better access to public facilities.  (SDG 11) 
 
 # Problem statement
 1. How can we ensure that everyone has access to good public facilities? 
@@ -31,8 +31,9 @@ We use a simple rule-based system:
 *For all other problems posted, we let volunteers mark them and have another volunteer to verify it, feeding the data to model for better prediction next time*
 
 # Running prototype
-- python serve.py
-- Others are still under development - check Jupyter notebook
+- Go to https://ludwighoon.github.io/Aduhan/Prototype1/homescreen.html for mockups 
+- python serve.py //Just for PoC for getting data, etc..
+- Others are still under development - check Jupyter notebook --> Data wrangling --> Possibly training model with WEKA (depends on time)
 - Currently visualisation is done in Tableau (remove dependency later)
 
 # More information
