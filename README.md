@@ -37,7 +37,8 @@ We use a simple rule-based system:
 *For all other problems posted, we let volunteers mark them and have another volunteer to verify it, feeding the data to model for better prediction next time*
 
 ## Running prototype
-- Go to https://ludwighoon.github.io/Aduhan/Prototype1/homescreen.html for mockups 
+- Go to https://ludwighoon.github.io/Aduhan/App%20Prototype%20V3/index.html#/screens/01de8dc3-c48f-4553-911e-d84823348ec5 for mockups 
+- Demo at https://youtu.be/9rsxbqe5Dtw 
 - python serve.py //Just for PoC for getting data, etc..
 - Others are still under development - check Jupyter notebook --> Data wrangling --> Possibly training model with WEKA (depends on time)
 - Currently visualisation is done in Tableau (remove dependency later)
