@@ -1,0 +1,21 @@
+#s-cd618492-04b5-4ca4-b329-898e3cc64c04 > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-cd618492-04b5-4ca4-b329-898e3cc64c04 > #alignmentBox {
+  position: relative;
+  max-width: 1366px;
+  max-height: 768px;
+}
+#s-cd618492-04b5-4ca4-b329-898e3cc64c04 #s-Browser_2 {
+  position: absolute;
+  width: 1145px;
+  height: 613px;
+  box-shadow: none;
+}
+#s-cd618492-04b5-4ca4-b329-898e3cc64c04 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}
